@@ -16,7 +16,7 @@ class PsychologistManager(BaseUserManager):
         psychologist.save(using=self._db)
         return psychologist
 
-    def crate_superpsychologist(self,username,password):
+    def create_superpsychologist(self,username,password):
         """
         Creates and saves a superpsychologist with the given username and password.
         """

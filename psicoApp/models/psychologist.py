@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin, BaseUserManager
 from django.contrib.auth.hashers import make_password
 from .city import City
-from .type_specialty import TypeSpecialty
+from .typeSpecialty import TypeSpecialty
 
 class PsychologistManager(BaseUserManager):
     def create_psychologist(self,username,password=None):

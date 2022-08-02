@@ -1,0 +1,3 @@
+from .psychologistCreateView import PsychologistCreateView
+from .psychoDetailView import PsychoDetailView
+from .psychologistsDetailView import PsychologistsDetailView

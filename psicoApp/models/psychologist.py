@@ -26,7 +26,7 @@ class PsychologistManager(BaseUserManager):
         return psychologist
 
 class Psychologist(AbstractBaseUser,PermissionsMixin):
-    id_document = models.BigAutoField(primary_key=True)
+    id = models.BigAutoField(primary_key=True)
     username = models.CharField('Username',max_length=30,unique=True)
     password = models.CharField('Password',max_length=256)
     name = models.CharField('Name',max_length=30)
@@ -43,7 +43,7 @@ class Psychologist(AbstractBaseUser,PermissionsMixin):
     )
 
     gender = models.CharField('Gender',max_length=1,choices=GENDER)
-    price = models.DecimalField('Price',max_digits=6,decimal_places=2)
+    consultation_price = models.DecimalField('Price',max_digits=8,decimal_places=2)
 
     def save(self,**kwargs):
         some_salt = 'mMUj0DrIK6vgtdIYepkIxN'
